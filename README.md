@@ -17,7 +17,7 @@ The method we are going to adopt in this project consists of the following steps
 
 -Analysing the words which contain different meaning, interprete them and put them in the right category
 
--Remove duplicate, synonyms and other irrelavant words
+-Remove duplicate, synonyms and other irrelevant words
 
 
 ####Results
