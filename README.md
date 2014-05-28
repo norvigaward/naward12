@@ -23,6 +23,6 @@ The method we are going to adopt in this project consists of the following steps
 ####Results
 Description of results: lots of data in form of textfiles which are dericed from the common web crawl.
 
-####Discussion: How should we interpret your results
+####Discussion: 
 Interpetation of the results is redundant to differences into the meaning of words, but at the same time
 the text contains errors so only fully correct pronounced words will be interpreted and categorised
