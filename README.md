@@ -2,7 +2,7 @@ naward12
 ========
 
 Team 12
-####Idea: 
+####Idea 
 If you consider a categorization by assigning specific words to a interest/category, 
 you can find out which interests are associated with which words, or so called queries? 
 Is this a suitable idea to work on? Because it sounds basic but it can provide important knowledge about the web 
