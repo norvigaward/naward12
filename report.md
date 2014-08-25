@@ -1,12 +1,11 @@
 ###This is the report
 
 ##Table of contents:
-Contents
-            
-1. [Idea] (#1-Idea)
-2. [Method] (#2-Method)
-3. [Results] (#3-Results)
-4. [Discussion] (#4-Discussion)
+
+`Idea` 
+`Method`
+`Results`
+`Discussion`
                 
         
  <p>   
