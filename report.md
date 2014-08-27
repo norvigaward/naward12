@@ -2,8 +2,9 @@
 
 Team: Naward12 (on Github)
 Subject: Categorization of common web crawl
+Course: Datascience (TU Delft) IN4144
 
-![alt tag](categorie-front.JPG)
+![alt tag](categorie-front.jpg)
 <I> Source: http://www.newrafael.com/cultural-categories/ </I>
 
 ##Table of contents:
@@ -26,7 +27,7 @@ website will also help to improve websites due to the ability to compare the com
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories to make different domains more visible for each category as they can be assigned towards different categories. The idea started due to the demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea can lead to a more useful amount of selected data to, for example, adopt data mining or machine-learning activities with help of that categorized data. But also for websites to express their intentions better towards different search engines.<br> The idea is to make it possible to gain insight into a URL by typing the domain name into the search engine which makes it possible to gain insight into a specific domain name. That insight is strengthened by providing visual representations in form of  <i>Scalable Vector Graphics</i>. These graphs will who the end-user how content on the website is categorized and therefore applicable for specific purposes. 
 
 <p>
-Below you'll find 
+Below you'll find an example table including values for different domains that can be assigned to different categories, wich are given below the columns as is staded in the figure below. The format is the same as the table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAwar competion.
 
 ![alt tag](categories.PNG)
 
