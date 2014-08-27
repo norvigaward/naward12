@@ -1,4 +1,10 @@
-#Endreport
+#Endreport for NorvigAward competition
+
+Team: Naward12 (on Github)
+Subject: Categorization of common web crawl
+
+![alt tag](categorie-front.JPG)
+<I> Source: http://www.newrafael.com/cultural-categories/ </I>
 
 ##Table of contents:
 
@@ -22,6 +28,8 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 <p>
 Below you'll find 
 
+![alt tag](categories.PNG)
+
 
 
 ![alt tag](search-didyoumean.JPG)
@@ -32,6 +40,8 @@ Figure 2. Appearance of descriptive statitiscs concerning calssification of the 
 
 ![alt tag](data-content.JPG)
 Figure 3. Table with probability values according to classification of the common web crawl
+
+
 
 <h2>2. Method: How have you performed your experiments</h2>
 A possible method is to first verify categories that are initially provided by a common brainstorm session between the teamers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
