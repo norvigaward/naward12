@@ -16,8 +16,22 @@ Secondly the insight into the web content is also applicable in case of looking 
 the data source, this is also functional. For instance typing in a domain and getting visual graphs about the content of a 
 website will also help to improve websites due to the ability to compare the composition of the websites with each other, and taking into account the specific public interest for those websites in order to target groups more detailed for advertising campaigns.
  
-<h2>1. Idea: A introduction to your idea</h2>
+<h2>1. Idea: An introduction to your idea</h2>
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories to make different domains more visible for each category as they can be assigned towards different categories. The idea started due to the demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea can lead to a more useful amount of selected data to, for example, adopt data mining or machine-learning activities with help of that categorized data. But also for websites to express their intentions better towards different search engines.<br> The idea is to make it possible to gain insight into a URL by typing the domain name into the search engine which makes it possible to gain insight into a specific domain name. That insight is strengthened by providing visual representations in form of  <i>Scalable Vector Graphics</i>. These graphs will who the end-user how content on the website is categorized and therefore applicable for specific purposes. 
+
+<p>
+Below you'll find 
+
+
+
+![alt tag](search-didyoumean.JPG)
+Figure 1. Case of wrong entrance of domainname
+
+![alt tag](didyoumean-searched.JPG)
+Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
+
+![alt tag](data-content.JPG)
+Figure 3. Table with probabili
 
 <h2>2. Method: How have you performed your experiments</h2>
 A possible method is to first verify categories that are initially provided by a common brainstorm session between the teamers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
