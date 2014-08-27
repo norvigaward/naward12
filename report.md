@@ -25,13 +25,13 @@ Below you'll find
 
 
 ![alt tag](search-didyoumean.JPG)
-Figure 1. Case of wrong entrance of domainname
+Figure 1. Case of wrong entrance of domainname, appearance of corrective name
 
 ![alt tag](didyoumean-searched.JPG)
 Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
 
 ![alt tag](data-content.JPG)
-Figure 3. Table with probabili
+Figure 3. Table with probability values according to classification of the common web crawl
 
 <h2>2. Method: How have you performed your experiments</h2>
 A possible method is to first verify categories that are initially provided by a common brainstorm session between the teamers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
