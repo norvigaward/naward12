@@ -33,18 +33,21 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 <p>
 Below you'll find an example table including values for different domains that can be assigned to different categories, wich are given below the columns as is staded in the figure below. The format is the same as the table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAwar competion.
 
+![alt tag](data-content.JPG)
+Figure 3. Table with probability values according to classification of the common web crawl
 
 
-
+*In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statement because of a mistake from users-side:*
 
 ![alt tag](search-didyoumean.JPG)
 Figure 1. Case of wrong entrance of domainname, appearance of corrective name
 
+*Below is provided an example of a succesfully givn domainname and visulization of that website into insightfull diagram. This will show for the couple of main categories, which percentage of the data conent that can be assigned to that specific domainname. Thus it is possible to gain insight into the content per domain:*
+
 ![alt tag](didyoumean-searched.JPG)
 Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
 
-![alt tag](data-content.JPG)
-Figure 3. Table with probability values according to classification of the common web crawl
+
 
 
 
@@ -93,3 +96,7 @@ World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, educat
 ## 6. Visualization of the data towards valuable insights into Big Data 
 Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
 Which websites contain most different meaningful words, and which one the fewest? Producing a Pie diagram as well with showing this interesting observation.
+
+## `advantages`: 
+1. With more insight into the webcontent a web-user can quickly scan per domain what kind of content is presented in a robust way. this will save time as a web-user doesn't need to scan the whole site for deciding upon the question whether this website is interesting or not. In this case more effective use of the internet is maded possible.
+2. Moreover, with the insight into an anourmous amount of domains, entrepeneurs, companies and the government can gain worthfull insight into a representational amount of domains and thereby having access to knowledge that can help them to gain economic value by investments, understandability of upcoming markets and opportunities for new platforms.
