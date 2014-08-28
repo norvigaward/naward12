@@ -13,8 +13,8 @@
 
 ## Table of contents:
 
-1. [Idea, An introduction to your idea](1#-Idea, An introduction to your idea)
-2. [Method, How have you performed your experiments](2#-Method: How have you performed your experiments)
+1. [Introduction to the idea](1#-introduction to the idea)
+2. [Method, How have you performed your experiments](2#-Method, How have you performed your experiments)
 3. [Results, Describe your results](3#-Results, Describe your results)
 4. [Discussion, How should we interpret your results](4#-Discussion, How should we interpret your results)
 5. [Categories, different categories are possible assigned to domains from the common web crawl](5#-Categories, different categories are possible assigned to domains from the common web crawl)
@@ -27,7 +27,7 @@ Secondly the insight into the web content is also applicable in case of looking 
 the data source, this is also functional. For instance typing in a domain and getting visual graphs about the content of a 
 website will also help to improve websites due to the ability to compare the composition of the websites with each other, and taking into account the specific public interest for those websites in order to target groups more detailed for advertising campaigns.
  
-## 1. Idea, An introduction to your idea
+## 1. Introduction to the idea
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories to make different domains more visible for each category as they can be assigned towards different categories. The idea started due to the demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea can lead to a more useful amount of selected data to, for example, adopt data mining or machine-learning activities with help of that categorized data. But also for websites to express their intentions better towards different search engines.<br> The idea is to make it possible to gain insight into a URL by typing the domain name into the search engine which makes it possible to gain insight into a specific domain name. That insight is strengthened by providing visual representations in form of  <i>Scalable Vector Graphics</i>. These graphs will who the end-user how content on the website is categorized and therefore applicable for specific purposes. 
 
 <p>
