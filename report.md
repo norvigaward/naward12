@@ -32,21 +32,18 @@ website will also help to improve websites due to the ability to compare the com
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories to make different domains more visible for each category as they can be assigned towards different categories. The idea started due to the demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea can lead to a more useful amount of selected data to, for example, adopt data mining or machine-learning activities with help of that categorized data. But also for websites to express their intentions better towards different search engines.<br> The idea is to make it possible to gain insight into a URL by typing the domain name into the search engine which makes it possible to gain insight into a specific domain name. That insight is strengthened by providing visual representations in form of  <i>Scalable Vector Graphics</i>. These graphs will who the end-user how content on the website is categorized and therefore applicable for specific purposes. 
 
 <p>
-Below you'll find an example table including values for different domains that can be assigned to different categories, wich are given below the columns as is staded in the figure below. The format is the same as the table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAwar competion.
 
-![alt tag](data-content.JPG)
-Figure 3. Table with probability values according to classification of the common web crawl
 
 
 *In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statement because of a mistake from users-side:*
 
 ![alt tag](search-didyoumean.JPG)
-Figure 1. Case of wrong entrance of domainname, appearance of corrective name
+<b>Figure 1. Case of wrong entrance of domainname, appearance of corrective name
 
-*Below is provided an example of a succesfully givn domainname and visulization of that website into insightfull diagram. This will show for the couple of main categories, which percentage of the data conent that can be assigned to that specific domainname. Thus it is possible to gain insight into the content per domain:*
+*Below is provided an example of a succesfully givn domainname and visualization of that website into insightfull diagram. This will show for the couple of main categories, which percentage of the data conent that can be assigned to that specific domainname. Thus it is possible to gain insight into the content per domain:*
 
 ![alt tag](didyoumean-searched.JPG)
-Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
+<b>Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
 
 
 
@@ -56,8 +53,9 @@ Figure 2. Appearance of descriptive statitiscs concerning calssification of the 
 A possible method is to first verify categories that are initially provided by a common brainstorm session between the teammembers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
 So this is about synonyms that can be interpreted as common. of course the count of unique words is also incorporated to be able to specify each category more according to the different meaning of those words.<br> For getting a list of meaningful and therefore valuable amount of classifications there will be made use of <a href="https://www.dmoz.org">this website</a>. This website is one of the largest comprehensive human-edited directory of the Word Wide Web. Moreover, it is historically called the Open Directory Project (ODP). This site is presumed to be de most widely distributed data base of content that is classified by humans. 
 In order to produce a machine-learning based classifier. The directory of this website is used in order to make the classifier as complete as possible. The website is therefore presumed to be a good approximation of all the content that is currently available on the web per domain. From every URL, the domain name will be deduced and consequently assigned to one or more categories in terms of probability chance that a given domain name, which is deduced from a URL, can be assigned to the categories. For Example a record will therefore be presented as follows:
- 
- <body>   
+
+<b>Table 1. Example of a record containing data from the common web crawl 
+ <body>  
 <table>
       <tr>
          <th>URL</th>
@@ -76,7 +74,13 @@ In order to produce a machine-learning based classifier. The directory of this w
        </tr>
               
 </table>
-     
+
+<p>
+*To provide insight into the intepeation by the application of the data from the common web crawl: below you'll find an example table including values for different domains that can be assigned to different categories, as stated. The format is the same as the first table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAward competition:*
+
+![alt tag](data-content.JPG)
+<b>Figure 3. Table with probability values according to classification of the common web crawl
+    
        
 ## 3. Describement of the results
 This section will emphasize on the results that can be expected from this project. First of all the Common crawl dataset is indeed the main source concerning the data that is analyzed in order to classify it. However the classification is done with help of another <a href=http://www.dmoz.org> source </a>. This website has been used to classify the content from the common crawl dataset. This implicates that the results are strongly dependent on the quality of that website. This means that the quality of the classification concerning the common crawl dataset is strongly dependent on the quality of the website. The better the classification on the website is done, the better the classifier is, and the better the classification of the content can be completed. Machine-learning has been used to produce the classifier. All categories are assigned according to the words on a specific website. So this means that different websites with various content is classified on that website. And therefore the website can provide the possibility to machine-learning and as a result of this, a suitable classifier. 
