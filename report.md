@@ -15,10 +15,10 @@
 
 1. [Introduction to the idea](1#-introduction to the idea)
 2. [Methodology towards performing experiments](2#-methodology towards performing experiments)
-3. [Results, Describe your results](3#-Results, Describe your results)
-4. [Discussion, How should we interpret your results](4#-Discussion, How should we interpret your results)
-5. [Categories, different categories are possible assigned to domains from the common web crawl](5#-Categories, different categories are possible assigned to domains from the common web crawl)
-6. [Visualization of the data towards valuable insights into Big Data](6#-Visualization of the data towards valuable insights into Big Data)
+3. [Describement of the results](3#-describement of the results)
+4. [Interpeation of the results](4#-interpeation of the results)
+5. [Classification into different categories](5#-classification into different categories)
+6. [Visualization of the data towards valuable insights into Big Data](6#-visualization of the data towards valuable insights into Big Data)
  <p>   
  <b>        
 As part of the norvigaward competition we participate in this competition, as three master students from Delft University of technology, in order to get more experience into data science, and particular into a better understanding of the content that is present into the different websites which are characterized by their domain name. The general goal of the competition is to show what can be done with a 3 billion web page common crawl dataset which is made available for the competition. </b></p>Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. There ,an end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
@@ -74,14 +74,15 @@ In order to produce a machine-learning based classifier. The directory of this w
 </table>
      
        
-## 3. Results, Describe your results
+## 3. Describement of the results
 This section will emphasize on the results that can be expected from this project. First of all the Common crawl dataset is indeed the main source concerning the data that is analyzed in order to classify it. However the classification is done with help of another <a href=http://www.dmoz.org> source </a>. This website has been used to classify the content from the common crawl dataset. This implicates that the results are strongly dependent on the quality of that website. This means that the quality of the classification concerning the common crawl dataset is strongly dependent on the quality of the website. The better the classification on the website is done, the better the classifier is, and the better the classification of the content can be completed. Machine-learning has been used to produce the classifier. All categories are assigned according to the words on a specific website. So this means that different websites with various content is classified on that website. And therefore the website can provide the possibility to machine-learning and as a result of this, a suitable classifier. 
  
 <br>
-## 4. Discussion, How should we interpret your results
+## 4. Interpeation of the results
 The interpretations of the results of the categorization is strongly dependent on the scalability of the retrieved categories with words. Therefore this section is filled whenever the results are interpreted. The visual representation, according to a given domain name is representational for the results that can be gained from the common crawl dataset. The visual graphing will show visual representations in order to interpret the results in a way which is representational for all of the different domains that are classified according to the classifier which is defined with help of a website which already contains different classifications. The visual graphs provide an overview on the classification of the content and therefore the chance of which the content of a given domain can be assigned to different amounts of categories. The results must be interpreted from the perspective of a general understanding of the content which is stated onto the different websites, in form of a categorization.
 <br>
-## 5. Categories, different categories are possible assigned to domains from the common web crawl
+## 5. Classification into different categories
+There are many categories possible to be used, in order to classify the content from the data in the common web crawl. These categories are adopted from dmoz.com as mentined earlier in ![alt](3-#desribement of the results). Below is presented several categories which are defined from the brainstorm between teammembers for the validation of the categories as presented in figure5.
 World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, education, science-fiction, literature, science, Electronics engineering, Civil engineering, computer science, Industrial design, Architecture, IT, Web shops, forum, Social Media, Maritime technology, sustainability,  entertainment, career opportunities, motorcycles, fashion, medicine treatment, government information, archeology, clothing and many more...
 
 *adoption of categorization to the common web crawl* 
