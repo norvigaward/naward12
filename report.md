@@ -34,6 +34,7 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 <p>
 
 
+First of all, the application will provide acces into insight by the user-interface in form of a main age (see figure 1 below).This page will also check whether the given domainname is right or not. If it is right that it provides results as can be seen in figure 2 below. Otherwise figure 1 is leading intially (see below). 
 
 *In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statement because of a mistake from users-side:*
 
@@ -44,7 +45,6 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 
 ![alt tag](didyoumean-searched.JPG)
 <b>Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
-
 
 
 
