@@ -5,9 +5,11 @@
 <I> Source: http://www.newrafael.com/cultural-categories/ </I>
 
 
-<b>Team:</b> Naward12 (on Github)
-<b>Subject:</b> Categorization of common web crawl
-<b>Course:</b> Datascience (TU Delft) IN4144
+## 
+
+1. <b>Team:</b> Naward12 (on Github)
+2. <b>Subject:</b> Categorization of common web crawl
+3. <b>Course:</b> Datascience (TU Delft) IN4144
 
 ## Table of contents:
 
@@ -16,7 +18,7 @@
 3. [Results: Describe your results](3#-Results: Describe your results)
 4. [Discussion: How should we interpret your results](4#-Discussion: How should we interpret your results)
 5. [Categories: different categories are possible assigned to domains from the common web crawl](5#-Categories: different categories are possible assigned to domains from the common web crawl)
-6. [
+6. [Visualization of the data towards valuable insights into Big Data](6#-Visualization of the data towards valuable insights into Big Data)
  <p>   
  <b>        
 As part of the norvigaward competition we participate in this competition, as three master students from Delft University of technology, in order to get more experience into data science, and particular into a better understanding of the content that is present into the different websites which are characterized by their domain name. The general goal of the competition is to show what can be done with a 3 billion web page common crawl dataset which is made available for the competition. </b></p>Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. There ,an end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
@@ -82,6 +84,6 @@ The interpretations of the results of the categorization is strongly dependent o
 ## 5. Categories: different categories are possible assigned to domains from the common web crawl
 World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, education, science-fiction, literature, science, Electronics engineering, Civil engineering, computer science, Industrial design, Architecture, IT, Web shops, forum, Social Media, Maritime technology, sustainability,  entertainment, career opportunities, motorcycles, fashion, medicine treatment, government information, archeology, clothing and many more...
 <br>
-## 6. Visualization of :
+## 6. Visualization of the data towards valuable insights into Big Data 
 Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
 Which websites contain most different meaningful words, and which one the fewest? Producing a Pie diagram as well with showing this interesting observation.
