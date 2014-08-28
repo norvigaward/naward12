@@ -14,7 +14,7 @@
 ## Table of contents:
 
 1. [Introduction to the idea](1#-introduction to the idea)
-2. [Method, How have you performed your experiments](2#-Method, How have you performed your experiments)
+2. [Methodology towards performing experiments](2#-methodology towards performing experiments)
 3. [Results, Describe your results](3#-Results, Describe your results)
 4. [Discussion, How should we interpret your results](4#-Discussion, How should we interpret your results)
 5. [Categories, different categories are possible assigned to domains from the common web crawl](5#-Categories, different categories are possible assigned to domains from the common web crawl)
@@ -33,7 +33,7 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 <p>
 Below you'll find an example table including values for different domains that can be assigned to different categories, wich are given below the columns as is staded in the figure below. The format is the same as the table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAwar competion.
 
-![alt tag](categories.PNG)
+
 
 
 
@@ -48,8 +48,8 @@ Figure 3. Table with probability values according to classification of the commo
 
 
 
-## 2. Method, How have you performed your experiments
-A possible method is to first verify categories that are initially provided by a common brainstorm session between the teamers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
+## 2. Methodology towards performing experiments
+A possible method is to first verify categories that are initially provided by a common brainstorm session between the teammembers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
 So this is about synonyms that can be interpreted as common. of course the count of unique words is also incorporated to be able to specify each category more according to the different meaning of those words.<br> For getting a list of meaningful and therefore valuable amount of classifications there will be made use of <a href="https://www.dmoz.org">this website</a>. This website is one of the largest comprehensive human-edited directory of the Word Wide Web. Moreover, it is historically called the Open Directory Project (ODP). This site is presumed to be de most widely distributed data base of content that is classified by humans. 
 In order to produce a machine-learning based classifier. The directory of this website is used in order to make the classifier as complete as possible. The website is therefore presumed to be a good approximation of all the content that is currently available on the web per domain. From every URL, the domain name will be deduced and consequently assigned to one or more categories in terms of probability chance that a given domain name, which is deduced from a URL, can be assigned to the categories. For Example a record will therefore be presented as follows:
  
@@ -83,6 +83,11 @@ The interpretations of the results of the categorization is strongly dependent o
 <br>
 ## 5. Categories, different categories are possible assigned to domains from the common web crawl
 World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, education, science-fiction, literature, science, Electronics engineering, Civil engineering, computer science, Industrial design, Architecture, IT, Web shops, forum, Social Media, Maritime technology, sustainability,  entertainment, career opportunities, motorcycles, fashion, medicine treatment, government information, archeology, clothing and many more...
+
+*adoption of categorization to the common web crawl* 
+
+![alt tag](categories.png)
+Figure 5: example list of first 100 categories used for categorization of data on webpages
 <br>
 ## 6. Visualization of the data towards valuable insights into Big Data 
 Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
