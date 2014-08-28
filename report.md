@@ -7,9 +7,9 @@
 
 ## 
 
-1. <b>Team:</b> Naward12 (on Github)
-2. <b>Subject:</b> Categorization of common web crawl
-3. <b>Course:</b> Datascience (TU Delft) IN4144
+- <b>Team:</b> Naward12 (on Github)
+- <b>Subject:</b> Categorization of common web crawl
+- <b>Course:</b> Datascience (TU Delft) IN4144
 
 ## Table of contents:
 
