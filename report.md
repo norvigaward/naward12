@@ -77,7 +77,7 @@ First of all, the application will provide acces into insight by the user-interf
 <b>Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
 
 
-
+<br>
 ## 2. Methodology towards performing experiments
 A possible method is to first verify categories that are initially provided by a common brainstorm session between the teammembers. Afterwards the different words that can be assigned to each of the categories can be measured by count. 
 So this is about synonyms that can be interpreted as common. of course the count of unique words is also incorporated to be able to specify each category more according to the different meaning of those words.<br> For getting a list of meaningful and therefore valuable amount of classifications there will be made use of <a href="https://www.dmoz.org">this website</a>. This website is one of the largest comprehensive human-edited directory of the Word Wide Web. Moreover, it is historically called the Open Directory Project (ODP). This site is presumed to be de most widely distributed data base of content that is classified by humans. 
@@ -111,7 +111,7 @@ In order to produce a machine-learning based classifier. The directory of this w
 <b>Figure 3. Table with probability values according to classification of the common web crawl
     
     
-       
+<br>       
 ## 3. Describement of the results
 This section will emphasize on the results that can be expected from this project. First of all the Common crawl dataset is indeed the main source concerning the data that is analyzed in order to classify it. However the classification is done with help of another <a href=http://www.dmoz.org> source </a>. This website has been used to classify the content from the common crawl dataset. This implicates that the results are strongly dependent on the quality of that website. This means that the quality of the classification concerning the common crawl dataset is strongly dependent on the quality of the website. The better the classification on the website is done, the better the classifier is, and the better the classification of the content can be completed. Machine-learning has been used to produce the classifier. All categories are assigned according to the words on a specific website. So this means that different websites with various content is classified on that website. And therefore the website can provide the possibility to machine-learning and as a result of this, a suitable classifier. 
  
@@ -140,7 +140,7 @@ World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, educat
 Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
 Which websites contain most different meaningful words, and which one the fewest? Producing a Pie diagram as well with showing this interesting observation.
 
-## `advantages`: 
+## `Advantages`: 
 1. With more insight into the webcontent a web-user can quickly scan per domain what kind of content is presented in a robust way. this will save time as a web-user doesn't need to scan the whole site for deciding upon the question whether this website is interesting or not. In this case more effective use of the internet is made possible.
 2. Moreover, with the insight into an anourmous amount of domains, entrepeneurs, companies and the government can gain worthfull insight into a representational amount of domains and thereby having access to knowledge that can help them to gain economic value by investments, understandability of upcoming markets and opportunities for new platforms.
 
