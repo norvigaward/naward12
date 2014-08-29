@@ -10,6 +10,36 @@
 - <b>Team:</b> Naward12 (on Github)
 - <b>Subject:</b> Categorization of common web crawl
 - <b>Course:</b> Datascience (TU Delft) IN4144
+- *Members:* 
+
+- <table>
+      <tr>
+         <th>Teammember</th>
+         <th>Name</th>
+         <th>Studentnumber</th>
+         <th>Study</th>
+      </tr>
+ 
+       <tr>
+        <td>1</td>
+        <td>P.S.N.Chandrasekaran Ayyanathan</td>
+        <td>4314506</td>
+        <td>Master CS TU Delft</td>
+       </tr>
+       <td>2</td>
+       <td>Spyros Foniadakis</td>
+       <td>4318773</td>
+       <td>Master CS TU Delft</td>
+      </tr>
+      <tr>
+       <td>3</td>
+       <td>Rafik Chelah</td>
+       <td>4113136</td>
+      <td>Master SEPAM TU Delft</td>
+              
+</table>
+
+
 
 ## Table of contents:
 
@@ -105,3 +135,6 @@ Which websites contain most different meaningful words, and which one the fewest
 ## `advantages`: 
 1. With more insight into the webcontent a web-user can quickly scan per domain what kind of content is presented in a robust way. this will save time as a web-user doesn't need to scan the whole site for deciding upon the question whether this website is interesting or not. In this case more effective use of the internet is made possible.
 2. Moreover, with the insight into an anourmous amount of domains, entrepeneurs, companies and the government can gain worthfull insight into a representational amount of domains and thereby having access to knowledge that can help them to gain economic value by investments, understandability of upcoming markets and opportunities for new platforms.
+
+
+# <a href=Naward12.com> Visit the website yourself </a>
