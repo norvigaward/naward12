@@ -66,7 +66,7 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 
 First of all, the application will provide acces into insight by the user-interface in form of a main age (see figure 1 below).This page will also check whether the given domainname is right or not. If it is right that it provides results as can be seen in figure 2 below. Otherwise figure 1 is leading intially (see below). 
 
-*In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statement because of a mistake from users-side:*
+*In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statements because of a mistake from the user-side:*
 
 ![alt tag](search-didyoumean.JPG)
 <b>Figure 1. Case of wrong entrance of domainname, appearance of corrective name
@@ -75,7 +75,6 @@ First of all, the application will provide acces into insight by the user-interf
 
 ![alt tag](didyoumean-searched.JPG)
 <b>Figure 2. Appearance of descriptive statitiscs concerning calssification of the domain
-
 
 
 
@@ -111,14 +110,20 @@ In order to produce a machine-learning based classifier. The directory of this w
 ![alt tag](data-content.JPG)
 <b>Figure 3. Table with probability values according to classification of the common web crawl
     
+    
        
 ## 3. Describement of the results
 This section will emphasize on the results that can be expected from this project. First of all the Common crawl dataset is indeed the main source concerning the data that is analyzed in order to classify it. However the classification is done with help of another <a href=http://www.dmoz.org> source </a>. This website has been used to classify the content from the common crawl dataset. This implicates that the results are strongly dependent on the quality of that website. This means that the quality of the classification concerning the common crawl dataset is strongly dependent on the quality of the website. The better the classification on the website is done, the better the classifier is, and the better the classification of the content can be completed. Machine-learning has been used to produce the classifier. All categories are assigned according to the words on a specific website. So this means that different websites with various content is classified on that website. And therefore the website can provide the possibility to machine-learning and as a result of this, a suitable classifier. 
+ 
+ 
  
 <br>
 ## 4. Interpretation of the results
 The interpretations of the results of the categorization is strongly dependent on the scalability of the retrieved categories with words. Therefore this section is filled whenever the results are interpreted. The visual representation, according to a given domain name is representational for the results that can be gained from the common crawl dataset. The visual graphing will show visual representations in order to interpret the results in a way which is representational for all of the different domains that are classified according to the classifier which is defined with help of a website which already contains different classifications. The visual graphs provide an overview on the classification of the content and therefore the chance of which the content of a given domain can be assigned to different amounts of categories. The results must be interpreted from the perspective of a general understanding of the content which is stated onto the different websites, in form of a categorization.
 <br>
+
+
+
 ## 5. Classification into different categories
 There are many categories possible to be used, in order to classify the content from the data in the common web crawl. These categories are adopted from dmoz.com as mentined earlier in paragraph 3. Below is presented several categories which are defined from the brainstorm between teammembers for the validation of the categories as presented in figure5.
 World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, education, science-fiction, literature, science, Electronics engineering, Civil engineering, computer science, Industrial design, Architecture, IT, Web shops, forum, Social Media, Maritime technology, sustainability,  entertainment, career opportunities, motorcycles, fashion, medicine treatment, government information, archeology, clothing and many more...
@@ -128,6 +133,9 @@ World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, educat
 ![alt tag](categories.png)
 <p>Figure 5: example list of first 100 categories used for categorization of data on webpages
 <br>
+
+
+
 ## 6. Visualization of the data towards valuable insights into Big Data 
 Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
 Which websites contain most different meaningful words, and which one the fewest? Producing a Pie diagram as well with showing this interesting observation.
