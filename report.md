@@ -123,7 +123,7 @@ The interpretations of the results of the categorization is strongly dependent o
 There are many categories possible to be used, in order to classify the content from the data in the common web crawl. These categories are adopted from dmoz.com as mentined earlier in paragraph 3. Below is presented several categories which are defined from the brainstorm between teammembers for the validation of the categories as presented in figure5.
 World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, education, science-fiction, literature, science, Electronics engineering, Civil engineering, computer science, Industrial design, Architecture, IT, Web shops, forum, Social Media, Maritime technology, sustainability,  entertainment, career opportunities, motorcycles, fashion, medicine treatment, government information, archeology, clothing and many more...
 
-*`Adoption of categorization to the common web crawl:` below you find a list with the first 100 categories that are gained from the website www.dmoz.com by machine-learning and are used in to classify the data that is gained from the common webcrawl to gain more insight in the data content. This is used to gain insight into the webpage content per domain, but also to get an overall insight into the total content of web by gaining data from the common web crawl*
+*`Adoption of categorization to the common web crawl:` below you find a list with the first 100 categories that are gained from the website www.dmoz.com by machine-learning and are used in to classify the data that is gained from the common webcrawl to gain more insight in the data content. This is used to gain insight into the webpage content per domain, but also to get an overall insight into the total content of web by gaining data from the common web crawl:*
 
 ![alt tag](categories.png)
 <p>Figure 5: example list of first 100 categories used for categorization of data on webpages
@@ -137,4 +137,4 @@ Which websites contain most different meaningful words, and which one the fewest
 2. Moreover, with the insight into an anourmous amount of domains, entrepeneurs, companies and the government can gain worthfull insight into a representational amount of domains and thereby having access to knowledge that can help them to gain economic value by investments, understandability of upcoming markets and opportunities for new platforms.
 
 
-# <a href=Naward12.com> Visit the website yourself </a>
+# <a href=http://www.Naward12.com> Visit the website yourself </a>
