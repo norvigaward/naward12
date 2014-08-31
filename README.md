@@ -86,13 +86,7 @@ where $VARIABLE is substituted with the required values.
 
 Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data. The results of the classification can be found <a href="https://copy.com/BUacI4uhhmVm">here</a>. Since the results are in the form of log probability, the values would be negative.
 
-## 3. UI perspective
-The application is available to the end user via a web interface and it is reachable via the following url: <a href=http://www.naward12.com> http://www.naward12.com </a>.
-<br>
-A menu page on the left reveals the options given; (1) access to the domain name search engine, (2) see an overview of all availabel domain names via the search engine and finally (3) a page providing a link to this very document. The options are further presented below.
-
-###3.1. Domain Name Search Engine
-The user can fill in the form a domain name or a part of it and attempt to search for the categories it falls in. An accuratelly typed domain name or a an accuratelly typed part of a domain name will return results to user; the categories that content of this domain name is mosty relevant to, along with a score to indicate the relevacy. The higher the score the higher the higher the convergence. In case of typing a part of the domain name, an indication will explicitelly mention the domain for which the results are displayed. In both cases, sugestions will be displayed if they are applicable, eg: similar or identical, deferentiated only in the suffix, domain names.
+## 3. Search Engine
 
 
 <br>
