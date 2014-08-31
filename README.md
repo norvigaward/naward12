@@ -95,6 +95,20 @@ The implementation of the user interface is relied on Microsoft Technologies; Mi
 ### 3.2. Business Layer
 As said, the Razor syntax was used so as to include the busines layer within the web pages. C# 4.0 was used throughout the whole business layer. In particular, regarding the search process, 
 
+The user can fill in the form a domain name and attempt to search for the categories it falls in. An accuratelly typed domain name will return results to user; the categories that the content of this domain name is mosty relevant to, along with a score to indicate the relevacy (see Figure 1 below). The higher the score the higher the convergence. 
+
+An innacuratelly typed domain name provokes a relative message to the user (see Figure 2), along with suggestions to the user, based on the Levenshtein Distance[1]. The user can either select one of the recomendation or perform a new search (see Figure 3).
+
+![alt tag](/pictures/report/search.JPG)
+<b>Figure 1. Appearance of descriptive statitiscs concerning calssification of the domain
+
+![alt tag](/pictures/report/didyoumeannew.JPG)
+<b>Figure 2. Case of wrong entrance of domainname, appearance of corrective name
+
+![alt tag](/pictures/report/didyoumeannew2.JPG)
+<b>Figure 3. Case of wrong entrance of domainname, user selects one of teh recomendations
+
+
 The source files that regard the web application can be found here.
 
 ### 3.3. Data Layer
@@ -106,7 +120,13 @@ The source code for the Java applcation performing the data transformation tasks
 
 <br>
 ## 4. Visualization
-The classified domains and their corresponding categories are counted for each unique category. This count is then employed in a d3js script to visualize in the form of a simple donut chart which displays the number of domains found in common crawl that correspond to each category. By moving the slider, you may view the different distribution of domains in a number of sub-categories.
+The classified domains and their corresponding categories are counted for each unique category. This count is then employed in a d3js script to visualize in the form of a simple donut chart which displays the number of domains found in common crawl that correspond to each category. By moving the slider, you may view the different distribution of domains in a number of sub-categories (see Fihure 4).
+
+![alt tag](/pictures/report/overview.JPG)
+<b>Figure 4. Case of wrong entrance of domainname, user selects one of teh recomendations
+
+## 5. References
+* [1] Black, Paul E., ed. (14 August 2008), "Levenshtein distance", Dictionary of Algorithms and Data Structures [online], U.S. National Institute of Standards and Technology, retrieved 3 April 2013
 
 
 # <a href=http://www.naward12.com> Visit the website yourself </a>
