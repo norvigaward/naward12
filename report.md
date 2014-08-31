@@ -1,8 +1,10 @@
 #Final Report for Norvig Award 2014 Competition
 
 
-![alt tag](/pictures/report/categorie-front.jpg)
-<l><I> Source: http://www.newrafael.com/cultural-categories/ </I>
+
+![alt tag](/pictures/report/report-coverpic.png)
+<br><l><I> Source: http://www.iharvest.co.uk/wp-content/uploads/2014/03/iHarvest_Screen_Scrape_Image_Of_Text.png </I>
+
 
 
 ## 
