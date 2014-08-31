@@ -1,7 +1,7 @@
 #Final Report for Norvig Award 2014 Competition
 
 
-![alt tag](categorie-front.jpg)
+![alt tag](/pictures/report/categorie-front.jpg)
 <l><I> Source: http://www.newrafael.com/cultural-categories/ </I>
 
 
@@ -78,10 +78,10 @@ The user can fill in the form a domain name or a part of it and attempt to searc
 
 An innacuratelly typed domain name provokes a relative message to the user (see fig. 2), along with suggestions to the user, based on the Levenshtein Distance[1].
 
-![alt tag](didyoumean-searched.JPG)
+![alt tag](/pictures/report/didyoumean-searched.JPG)
 <b>Figure 1. Appearance of descriptive statitiscs concerning calssification of the domain
 
-![alt tag](search-didyoumean.JPG)
+![alt tag](/pictures/report/search-didyoumean.JPG)
 <b>Figure 2. Case of wrong entrance of domainname, appearance of corrective name
 
 ###2.2. Domain Names Overview
@@ -120,7 +120,7 @@ In order to produce a machine-learning based classifier. The directory of this w
 <p>
 *To provide insight into the intepeation by the application of the data from the common web crawl: below you'll find an example table including values for different domains that can be assigned to different categories, as stated. The format is the same as the first table which was given earlier in this report. Only now a sample picture is shown from the actual datacontent, as it will be shown on the aplication interface for the NorvigAward competition:*
 
-![alt tag](data-content.JPG)
+![alt tag](/pictures/report/data-content.JPG)
 <b>Figure 3. Table with probability values according to classification of the common web crawl
     
     
@@ -143,7 +143,7 @@ World news, Food, Cars, Religion, Psychology, Sociology, Cooking, sports, educat
 
 *`Adoption of categorization to the common web crawl:` below you find a list with the first 100 categories that are gained from the website www.dmoz.com by machine-learning and are used in to classify the data that is gained from the common webcrawl to gain more insight in the data content. This is used to gain insight into the webpage content per domain, but also to get an overall insight into the total content of web by gaining data from the common web crawl:*
 
-![alt tag](categories.png)
+![alt tag](/pictures/report/categories.png)
 <p>Figure 5: example list of first 100 categories used for categorization of data on webpages
 
 
