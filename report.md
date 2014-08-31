@@ -1,4 +1,4 @@
-#Endreport for NorvigAward competition
+#Final Report for Norvig Award 2014 Competition
 
 
 ![alt tag](categorie-front.jpg)
@@ -16,7 +16,7 @@
       <tr>
          <th>Teammember</th>
          <th>Name</th>
-         <th>Studentnumber</th>
+         <th>Student number</th>
          <th>Study</th>
       </tr>
  
@@ -44,14 +44,14 @@
 ## Table of contents:
 
 1. [Introduction to the idea](1#-introduction to the idea)
-2. [Methodology towards performing experiments](2#-methodology towards performing experiments)
-3. [Describement of the results](3#-describement of the results)
-4. [Interpeation of the results](4#-interpeation of the results)
-5. [Classification into different categories](5#-classification into different categories)
+2. [Methodology followed in experiments](2#-methodology followed in experiments)
+3. [Description of the results](3#-description of the results)
+4. [Interpretation of the results](4#-interpretation of the results)
+5. [Classification into categories](5#-classification into different categories)
 6. [Visualization of the data towards valuable insights into Big Data](6#-visualization of the data towards valuable insights into Big Data)
  <p>   
  <b>        
-As part of the norvigaward competition we participate in this competition, as three master students from Delft University of technology, in order to get more experience into data science, and particular into a better understanding of the content that is present into the different websites which are characterized by their domain name. The general goal of the competition is to show what can be done with a 3 billion web page common crawl dataset which is made available for the competition. </b></p>Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. There ,an end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
+As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into Data Science concepts and particularly to gain a better understanding of the content that is present into the different websites which are characterized by their domain name. The goal of the competition is to encourage innovative usage and exploitation of a 3 billion web page common crawl dataset that is publicly available. </b></p>Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. There ,an end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
 <br>
 <br>
 Secondly the insight into the web content is also applicable in case of looking for more information into specific end-users' interests within websites’ borders, usually concerning websites that contain big amounts of information in general but user-specific interest must be deduced from it in short amount of processing time. When end-users have the desire to gain more specific information into a specific interest and using then common web crawl as 
