@@ -45,29 +45,23 @@
 
 #### Table of contents:
 
-1. [Introduction to the idea](1#-introduction to the idea)
-2. [Core Functionalities as of a UI perspective](2#-core functionalities as of a ui perspective)]
-3. [Methodology followed in experiments](3#-methodology followed in experiments)
-4. [Description of the results](4#-description of the results)
-5. [Interpretation of the results](5#-interpretation of the results)
-6. [Classification into categories](6#-classification into different categories)
-7. [Visualization of the data towards valuable insights into Big Data](7#-visualization of the data towards valuable insights into Big Data)
+1. [Introduction](1#-introduction to the idea)
+2. [Methodology](2#-methodology followed in experiments)
+3. [UI Perspective](3#-core functionalities as of a ui perspective)]
+4. [Visualization](4#-visualization of the data towards valuable insights into Big Data)
 
 ### Abstract 
 <i> As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into Data Science concepts and particularly to gain a better understanding of the content that is present into the different websites which are characterized by their domain name. The goal of the competition is to encourage innovative usage and exploitation of more than 3 billion web page common crawl dataset that is publicly available. </b>
 </i>
 
-Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. The user would have not prior knowledge whether the URL truly pertains to what they wish to search and can would only be certain of this by manually opening the URL and reading its contents.
+Background for the idea takes its origin from search engines that provide lists of URL's which are the result of web related queries. The user would not have prior knowledge whether the URL truly pertains to what they wish to search and would only be certain of this by manually opening the URL and reading its contents.
 
-With the solution which is proposed, the end-users will have a search engine which can refine their search results further by analyzing the content of the URL beforehand through categorization and decide whether or not a website is interesting for the end-user.
-<br>
-<br>
-Secondly this process also allows to gain an insight into the World Wide Web as a whole and narrow down user interests since the major part of the web comprises of content by individual users and not major corporations. This provides a wide variety of opportunities that would include personalized recommendations, consumer targeted advertising, etc.
+With the solution which is proposed, the end-users will have a search engine which analyzes the content of the URL beforehand through categorization and decide whether or not a website is interesting for the end-user.
+
+Secondly it also allows to gain an insight into the World Wide Web as a whole and narrow down user interests since the major part of the web comprises of content by individual users and not only major corporations. This provides a wide variety of opportunities that would include personalized recommendations, consumer targeted advertising, etc.
  
-## 1. Introduction to the idea
-The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories and exhibit websites's relativity towards different categories. The idea's main starting point was a demand of gaining more insight into the data that can be reached through the common web crawl. Another motivation towards this direction was the need for acquiring information regarding the topic of a website in advance, meaning before even navigating to it, with a view to aiding in search engine results relevancy.
-<br>
-In the light of the motivations explained above, the implementation of idea targets to making possible to gain insight into a domain's topic relevancy by typing the domain name into the search engine designed towards this direction. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture. 
+## 1. Introduction
+The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories and exhibit websites's relativity towards different categories. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture.
 
 <br>
 ## 2. Methodology
@@ -110,13 +104,8 @@ The user can fill in the form a domain name or a part of it and attempt to searc
 
 
 <br>
-## 4. Visualization of the data towards valuable insights into Big Data 
-Influence/popularity of category on the web. Pie diagram which can show what kind of category contains the most textual data. Specification of a category. Tables with the frequency of different unique founded words for each category (that also is part of the web crawl). Similarity or overlapping of different categories with each other. By comparing the results of founded words from the same websites but assigned to different categories (why is that text together?).
-Which websites contain most different meaningful words, and which one the fewest? Producing a Pie diagram as well with showing this interesting observation.
-
-## `Advantages`: 
-1. With more insight into the webcontent a web-user can quickly scan per domain what kind of content is presented in a robust way. this will save time as a web-user doesn't need to scan the whole site for deciding upon the question whether this website is interesting or not. In this case more effective use of the internet is made possible.
-2. Moreover, with the insight into an anourmous amount of domains, entrepeneurs, companies and the government can gain worthfull insight into a representational amount of domains and thereby having access to knowledge that can help them to gain economic value by investments, understandability of upcoming markets and opportunities for new platforms.
+## 4. Visualization
+The classified domains and their corresponding categories are counted for each unique category. This count is then employed in a d3js script to visualize in the form of a simple donut chart which displays the number of domains found in common crawl that correspond to each category. By moving the slider, you may view the different distribution of domains in a number of sub-categories.
 
 
 # <a href=http://www.naward12.com> Visit the website yourself </a>
