@@ -69,26 +69,18 @@ The idea is to derive all relevant textual data from the common web crawl in ord
 <br>
 In the light of the motivations explained above, the implementation of idea targets to making possible to gain insight into a domain's topic relevancy by typing the domain name into the search engine designed towards this direction. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture. 
 
-## 2. Core Functionalities as of a UI perspective
-The application is available to the end user via a web interface and it is reachable via the following url: <a href=http://www.naward12.com> http://www.naward12.com </a>.
 <br>
-A menu page on the left reveals the options given; (1) access to the domain name search engine, (2) see an overview of all availabel domain names via the search engine and finally (3) a page providing a link to this very document. The options are further presented below.
-
-###2.1. Domain Name Search Engine
-The user can fill in the form a domain name or a part of it and attempt to search for the categories it falls in. An accuratelly typed domain name or a an accuratelly typed part of a domain name will return results to user; the categories that content of this domain name is mosty relevant to, along with a score to indicate the relevacy. The higher the score the higher the higher the convergence. In case of typing a part of the domain name, an indication will explicitelly mention the domain for which the results are displayed. In both cases, sugestions will be displayed if they are applicable, eg: similar or identical, deferentiated only in the suffix, domain names.
-
-<br>
-## 3. Methodology
+## 2. Methodology
 Below we describe in detail of the methodology involved in categorizing the pages of the Common Crawl dataset through the use of a classifier.
 
-###3.1 Data Collection
+###2.1 Data Collection
 In order to train our classifier to categorize a web page, we must first collect pages that have already have been classified and have accurate labels. These are available through <a href=http://www.dmoz.org/>Open Directory Project</a> which comprises of human assigned labels to web pages. We utilized 517 categories in total that can be found in the <a href="https://github.com/norvigaward/naward12/blob/master/stats/labels.txt">repository</a>.
 
 - The ODP comprises of multiple levels of categories, to maintain simplicity we only traverse through two levels of the categories and pull the URLs. This is stored in a <a href="https://copy.com/L10OrSzm6DjH">json</a> file which is actually a parse of the <a href="http://www.dmoz.org/rdf.html">rdf</a> file provided by ODP. 
 - We then utilize a custom <a href="http://doc.scrapy.org/en/latest/index.html">Scrapy</a> module that can be found in our <a href="https://github.com/norvigaward/naward12/tree/master/scraper">repository</a> to crawl the content of the URLs listed on the second level of ODP. Only this time, we ignore all script, style and most common english words to attain only the most informative words for each web page. 
 - The most informative words stored in a large TSV file found that can be found <a href="https://copy.com/L10OrSzm6DjH">here</a>. The TSV file is then parsed into a hadoop sequence file using a script found <a href="https://github.com/norvigaward/naward12/tree/master/mahout">here</a>.
 
-###3.2 Training
+###2.2 Training
 Once we attain the training data, a naive bayes classifier is trained through the use of <a href="https://mahout.apache.org/">Apache Mahout</a>. First, the new sequence file must be uploaded and the following commands must be executed in sequence:
 
 <pre>
@@ -96,7 +88,19 @@ $ mahout seq2sparse -i odp-seq -o odp-vectors
 $ mahout trainnb -i odp-vectors/tfidf-vectors -el -li labelindex -o model -ow -c
 </pre>
 
-The first line of code converts the uploaded hadoop sequence file into vectors that would be usable by the classifier. The tfidif-vectors folder is then supplied as input to the naive bayes classifier to finally give the resultant model and a list of all the labels used.
+The first line of code converts the uploaded hadoop sequence file into vectors that would be usable by the classifier. The tfidif-vectors folder is then supplied as input to the naive bayes classifier to finally give the resultant fitted model and a list of all the labels used.
+
+###2.3 Classifying CC
+Once we 
+
+## 3. Core Functionalities as of a UI perspective
+The application is available to the end user via a web interface and it is reachable via the following url: <a href=http://www.naward12.com> http://www.naward12.com </a>.
+<br>
+A menu page on the left reveals the options given; (1) access to the domain name search engine, (2) see an overview of all availabel domain names via the search engine and finally (3) a page providing a link to this very document. The options are further presented below.
+
+###3.1. Domain Name Search Engine
+The user can fill in the form a domain name or a part of it and attempt to search for the categories it falls in. An accuratelly typed domain name or a an accuratelly typed part of a domain name will return results to user; the categories that content of this domain name is mosty relevant to, along with a score to indicate the relevacy. The higher the score the higher the higher the convergence. In case of typing a part of the domain name, an indication will explicitelly mention the domain for which the results are displayed. In both cases, sugestions will be displayed if they are applicable, eg: similar or identical, deferentiated only in the suffix, domain names.
+
 
 <br>
 ## 4. Visualization of the data towards valuable insights into Big Data 
