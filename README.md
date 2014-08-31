@@ -89,6 +89,21 @@ Each classification takes around 2hrs to complete. Due to time constraints, we w
 ## 3. Search Engine
 
 
+### 3.1. User Interface - Presentation Layer
+The implementation of the user interface is relied on Microsoft Technologies; Microsoft Web Matrix was used as the IDE for designing and structuring teh web applicationa and Microsoft .NET Framework 4 was used so as to include ASP.NET 4.0 and the RAZOR syntax.
+
+### 3.2. Business Layer
+As said, the Razor syntax was used so as to include the busines layer within the web pages. C# 4.0 was used throughout the whole business layer. In particular, regarding the search process, 
+
+The source files that regard the web application can be found here.
+
+### 3.3. Data Layer
+The data layer consists of the files that contain the information returned by the search engine's responses. All crawled data was initially stored in files and indexed by URL so as to contain the top three categories closer in terms of content relevancy, along with the score each URL exhibited to each category. These files were transformed, so as to group the URLs deriving from the same source website and assign the average of the score per category to the root website for this specific category. Subsequenty, the websites were indexed on their domain names and their information were stored in files named after the first two letters of their domain names, so as to increase efficiency and decrease response time. Java was used for transforming files and providing the final data and file structure, so as to be used by the business layer.
+
+The described process was completed in two steps: (1) extracting the domain names, re-grouping the URLs into alphabetical order and spreading them each to the appropriate file and (2) grouping the URLs to their corresponding source website and merging the categories and their scores to point to the webstes as well.
+
+The source code for the Java applcation performing the data transformation tasks can be found here.
+
 <br>
 ## 4. Visualization
 The classified domains and their corresponding categories are counted for each unique category. This count is then employed in a d3js script to visualize in the form of a simple donut chart which displays the number of domains found in common crawl that correspond to each category. By moving the slider, you may view the different distribution of domains in a number of sub-categories.
