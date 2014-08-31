@@ -1,0 +1,15 @@
+region	fruit	count
+East	Apples	53245
+West	Apples	28479
+South	Apples	19697
+North	Apples	24037
+Central	Apples	40245
+East	Oranges	200
+South	Oranges	200
+Central	Oranges	200
+East	Grapes	283
+South	Grapes	192
+Central	Grapes	100
+East	pine	23434
+South	pine	19342
+Central	pine	10230
