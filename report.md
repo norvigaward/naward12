@@ -41,7 +41,7 @@
 
 
 
-## Table of contents:
+#### Table of contents:
 
 1. [Introduction to the idea](1#-introduction to the idea)
 2. [Methodology followed in experiments](2#-methodology followed in experiments)
@@ -49,21 +49,25 @@
 4. [Interpretation of the results](4#-interpretation of the results)
 5. [Classification into categories](5#-classification into different categories)
 6. [Visualization of the data towards valuable insights into Big Data](6#-visualization of the data towards valuable insights into Big Data)
- <p>   
- <b>        
-As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into Data Science concepts and particularly to gain a better understanding of the content that is present into the different websites which are characterized by their domain name. The goal of the competition is to encourage innovative usage and exploitation of a 3 billion web page common crawl dataset that is publicly available. </b></p>Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. There ,an end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
+
+### Abstract 
+<i> As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into Data Science concepts and particularly to gain a better understanding of the content that is present into the different websites which are characterized by their domain name. The goal of the competition is to encourage innovative usage and exploitation of a 3 billion web page common crawl dataset that is publicly available. </b>
+</i>
+
+Background as basis for the idea to be started with this project has its origin into search engines providing lists of URL’s which could be presumed to be deduced from the web as a result of web related queries. This list contains indeed links to websites which have that information. However there is a difference between getting a list of URL’s which probably will contain that short of information that can be assigned to the given queries but without the initial specific text. 
+
+An end-user need to analyze the URL’s first to possibly find the information he or she initially demand for by typing in a set of queries. With the solution which is proposed, the end-users will have a search engine which can refine their search results further in case that a lot of content on a specific URL appears for instance, but need to be analyzed in a short amount of time to be able to either dismiss or accept a URL, which was proposed by a search engine. In this way users can refine their results further and gain more specific results towards desired information in less time. The big advantage is that content can be analyzed with more depth and used to decide whether or not a website is interesting for an end-user to use or not. That usage can be seen from different perspectives according to the different kind of information that can be assigned to a website for example, personal interests, hobbies, academic or business.
 <br>
 <br>
 Secondly the insight into the web content is also applicable in case of looking for more information into specific end-users' interests within websites’ borders, usually concerning websites that contain big amounts of information in general but user-specific interest must be deduced from it in short amount of processing time. When end-users have the desire to gain more specific information into a specific interest and using then common web crawl as 
-the data source, this is also functional. For instance typing in a domain and getting visual graphs about the content of a 
-website will also help to improve websites due to the ability to compare the composition of the websites with each other, and taking into account the specific public interest for those websites in order to target groups more detailed for advertising campaigns.
+the data source, this is also functional. For instance typing in a domain and getting visual graphs about the content of a website will also help to improve websites due to the ability to compare the composition of the websites with each other, and taking into account the specific public interest for those websites in order to target groups more detailed for advertising campaigns.
  
 ## 1. Introduction to the idea
-The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories to make different domains more visible for each category as they can be assigned towards different categories. The idea started due to the demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea can lead to a more useful amount of selected data to, for example, adopt data mining or machine-learning activities with help of that categorized data. But also for websites to express their intentions better towards different search engines.<br> The idea is to make it possible to gain insight into a URL by typing the domain name into the search engine which makes it possible to gain insight into a specific domain name. That insight is strengthened by providing visual representations in form of  <i>Scalable Vector Graphics</i>. These graphs will who the end-user how content on the website is categorized and therefore applicable for specific purposes. 
+The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories and expose websites's relativity towards different categories. The idea's main starting point was a demand of gaining more insight into the data that can be reached through the common web crawl. This categorization idea could lead to further and more enlightening conclusions regarding the crawled data once further data mining or more machine-learning prcesses are applied. Another motivation towards this direction was the need for acquiring information regarding the topic of a website in advance, meaning before even navigating to it, with a view to aiding in search engine results relevancy.
+<br>
+In the light of the motivations explained above, the implementation of idea tarkets to making possible to gain insight into a domain's topic relevancy by typing the domain name into the search engine designed towards this direction. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture. 
 
 <p>
-
-
 First of all, the application will provide acces into insight by the user-interface in form of a main age (see figure 1 below).This page will also check whether the given domainname is right or not. If it is right that it provides results as can be seen in figure 2 below. Otherwise figure 1 is leading intially (see below). 
 
 *In case of a wrong entrance by giving a wrong domainname, the application will suggest a alternative search term which seems to appear in the system. This is to prevent error statements because of a mistake from the user-side:*
