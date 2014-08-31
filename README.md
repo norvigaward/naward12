@@ -46,13 +46,13 @@
 <i> As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into data science concepts by making use of Common Crawl data that is publicly available in the process also learning to use hadoop and also make novel use of big data. </b>
 </i>
 
+## 1. Introduction
 Background for the idea takes its origin from search engines that provide lists of URL's which are the result of web related queries. The user would not have prior knowledge whether the URL truly pertains to what they wish to search and would only be certain of this by manually opening the URL and reading its contents.
 
 With the solution which is proposed, the end-users will have a search engine which analyzes the content of the URL beforehand through categorization and decide whether or not a website is interesting for the end-user.
 
 Secondly it also allows to gain an insight into the World Wide Web as a whole and narrow down user interests since the major part of the web comprises of content by individual users and not only major corporations. This provides a wide variety of opportunities that would include personalized recommendations, consumer targeted advertising, etc.
  
-## 1. Introduction
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories and exhibit websites's relativity towards different categories. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture.
 
 <br>
