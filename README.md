@@ -43,15 +43,7 @@
 
 
 
-#### Table of contents:
-
-1. [Introduction](1#-introduction to the idea)
-2. [Methodology](2#-methodology followed in experiments)
-3. [UI Perspective](3#-core functionalities as of a ui perspective)]
-4. [Visualization](4#-visualization of the data towards valuable insights into Big Data)
-
-### Abstract 
-<i> As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into Data Science concepts and particularly to gain a better understanding of the content that is present into the different websites which are characterized by their domain name. The goal of the competition is to encourage innovative usage and exploitation of more than 3 billion web page common crawl dataset that is publicly available. </b>
+<i> As part of the Norvig Award competition we participate in this competition, as three master students from Delft University of Technology, in order to get more experience into data science concepts by making use of Common Crawl data that is publicly available in the process also learning to use hadoop and also make novel use of big data. </b>
 </i>
 
 Background for the idea takes its origin from search engines that provide lists of URL's which are the result of web related queries. The user would not have prior knowledge whether the URL truly pertains to what they wish to search and would only be certain of this by manually opening the URL and reading its contents.
