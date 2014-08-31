@@ -55,7 +55,7 @@ Secondly it also allows to gain an insight into the World Wide Web as a whole an
  
 The idea is to derive all relevant textual data from the common web crawl in order to classify it into different categories and exhibit websites's relativity towards different categories. That insight is strengthened by providing visual representations in form of <i>Scalable Vector Graphics</i>, so as to help the end-user understand the overall picture.
 
-<br>
+
 ## 2. Methodology
 Below we describe in detail of the methodology involved in categorizing the pages of the Common Crawl dataset through the use of a classifier.
 
@@ -82,7 +82,7 @@ Once the classifier is trained, the next course of action is to begin classifica
 <pre>
 yarn jar odp-1.0-fatjar.jar odp model odp-vectors/dictionary.file-0 odp-vectors/df-count/part-r-00000 labelindex /data/public/common-crawl/crawl-data/CC-MAIN-2014-10/segments/1393999635677/seq/CC-MAIN-20140305060715-000$VARIABLE-ip-10-183-142-35.ec2.internal.warc.seq output$VARIABLE
 </pre>
-where <pre>$VARIABLE</pre> is substituted with the required values.
+where $VARIABLE is substituted with the required values.
 
 Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data.
 
