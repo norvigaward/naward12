@@ -77,14 +77,14 @@ $ mahout trainnb -i odp-vectors/tfidf-vectors -el -li labelindex -o model -ow -c
 The first line of code converts the uploaded hadoop sequence file into vectors that would be usable by the classifier. The tfidif-vectors folder is then supplied as input to the naive bayes classifier to finally give the resultant fitted model and a list of all the labels used.
 
 ###2.3 Classifying CC
-Once the classifier is trained, the next course of action is to begin classification of the common crawl data. Before classification, we parse the sequence files by removing the script, style and inline tags finally utilizing the clean body of the web page for classification. The java project in the <a href="https://github.com/norvigaward/naward12/tree/master/odp">repository</a> must be installed with maven. Finally the resulting jar file must be built by supplying the model, dictionary-frequency, labels, input sequence and output paths in the following manner:
+Once the classifier is trained, the next course of action is to begin classification of the common crawl data. Before classification, we parse the sequence files by removing the script, style and inline tags finally utilizing the clean body of the web page for classification. We take into consideration the top 3 most relevant categories based upon the values of their log probability so as to compensate for user perception of websites. The java project in the <a href="https://github.com/norvigaward/naward12/tree/master/odp">repository</a> must be installed with maven. Finally the resulting jar file must be built by supplying the model, dictionary-frequency, labels, input sequence and output paths in the following manner:
 
 <pre>
 yarn jar odp-1.0-fatjar.jar odp model odp-vectors/dictionary.file-0 odp-vectors/df-count/part-r-00000 labelindex /data/public/common-crawl/crawl-data/CC-MAIN-2014-10/segments/1393999635677/seq/CC-MAIN-20140305060715-000$VARIABLE-ip-10-183-142-35.ec2.internal.warc.seq output$VARIABLE
 </pre>
 where $VARIABLE is substituted with the required values.
 
-Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data.
+Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data. The results of the classification can be found <a href="https://copy.com/BUacI4uhhmVm">here</a>. Since the results are in the form of log probability, the values would be negative.
 
 ## 3. Core Functionalities as of a UI perspective
 The application is available to the end user via a web interface and it is reachable via the following url: <a href=http://www.naward12.com> http://www.naward12.com </a>.
