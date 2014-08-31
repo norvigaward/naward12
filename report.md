@@ -14,7 +14,7 @@
 - <b>Course:</b> Datascience (TU Delft) IN4144
 - *Members:* 
 
-- <table>
+ <table>
       <tr>
          <th>Teammember</th>
          <th>Name</th>
