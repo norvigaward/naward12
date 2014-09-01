@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/_Layout.cshtml";  
+}
+<body>
+    <h2>Content</h2>
+    <p>
+        Here the list of all domain names and scores will be displayed
+    </p>
+    <br />
+    <div class="CSSTableGenerator" >
+    <table class="CSSTableGenerator" id="CSSTableGenerator">
+    @{
+        <tr>
+            <td>Domain Name</td>
+            <td colspan="5">Categories</td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>@Category.Entertainment</td>
+            <td>@Category.School</td>
+            <td>@Category.Sports</td>
+            <td>@Category.Politics</td>
+            <td>@Category.News</td>
+        </tr>
+
+        String line;
+        String[] data;
+        StreamReader reader = new StreamReader(@"\DataFiles\allDomainNames.txt");
+        //StreamReader reader = new StreamReader(@"~\DataScience\allDomainNames.txt");
+        while(true)
+        {
+            line = reader.ReadLine();
+            if (line == null){
+                break;
+            }
+            data = line.Split(new char[]{'|'});
+
+            <tr>
+                <td>@data[0]</td>
+                <td>@data[1]</td>
+                <td>@data[2]</td>
+                <td>@data[3]</td>
+                <td>@data[4]</td>
+                <td>@data[5]</td>
+            </tr>
+
+        }
+        
+    }
+    </table>
+    </div>
+</body>
+

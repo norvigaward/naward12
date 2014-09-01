@@ -1,0 +1,83 @@
+html{ height:100%; margin:0; padding:0; }
+
+body {
+  height:60%;
+  font-family:'Trebuchet MS',  'Arial', 'Helvetica', 'sans-serif';
+  font-size:10pt;
+  background-color: #F8F8FF;
+  line-height:1.6em;
+}
+
+h1{ font-size:1.6em; }
+h2{ font-size:1.4em; }
+
+#container{
+   min-height:100%;
+   position:relative;
+   left:10%;
+}
+
+#header{
+  padding:8px;
+  width:80%;
+  height:150px;
+  background-color:#808080;
+  color:White;
+}
+
+#main{
+  width:80%;
+  padding: 8px;
+  padding-bottom:4em;
+  background-color:White;
+}
+
+#footer{
+  width:80%;
+  height:2em;
+  padding:8px;
+  margin-top:-2em;
+  background-color:LightGray;
+}
+
+#newimg {
+        -webkit-transform: scale(0.9); /*Webkit 0.7 times the original Image size*/
+        -moz-transform: scale(0.9); /*Mozilla 0.7 times the original Image size*/
+        -o-transform: scale(0.9); /*Opera 0.7 times the original Image size*/
+        -webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+        -moz-transition-duration: 0.5s; /*Mozilla Animation duration*/
+        -o-transition-duration: 0.5s; /*Opera Animation duration*/
+        opacity: 0.9;
+        /*margin: 0 10px 5px 0;*/
+    }
+
+        #newimg:hover {
+            -webkit-transform: scale(1.3); /*Webkit: 0.5 times the original Image size*/
+            -moz-transform: scale(1.3); /*Mozilla 0.5 times the original Image size*/
+            -o-transform: scale(1.3); /*Opera 0.5 times the original Image size*/
+            opacity: 1;
+        }
+
+.head { background-color: #E8E8E8; font-weight: bold; color: #FFF; }
+.grid th, .grid td { border: 1px solid #C0C0C0; padding: 5px; }
+.alt { background-color: #E8E8E8; color: #000; }
+.selected {background-color:Yellow;}
+span.caption {width:100px;}
+span.dataDisplay {font-weight:bold;}
+
+	      .validation-summary-errors{
+        border:2px dashed red;
+        color:red;
+        font-weight:bold;
+        margin:12px;
+      }
+
+
+nav, section {
+    display: block;
+}
+
+
+
+
+

@@ -1,0 +1,162 @@
+﻿@using System.Collections.Generic
+@using System.Text
+@using System.Linq
+@{
+    Layout = "~/_Layout.cshtml";  
+}
+@{
+    List<String> categories = new List<String>();
+    List<Double> percentageValues = new List<Double>();
+    SortedSet<DidYouMeanCandidate> didYouMeanCollection =  new SortedSet<DidYouMeanCandidate>();
+
+    String searchedDomain = "";
+
+    searchedDomain = Request.Form["domain"];
+    if(IsPost)
+    {
+        if( !searchedDomain.IsEmpty() ){
+
+            // read all domain names to a List<String>
+            List<WeightedDomainResult> allDomains = new List<WeightedDomainResult>();
+            StreamReader reader = new StreamReader(@"C:\Users\Spyros\Documents\My Web Sites\ServicePlatform[v001]\App_Code\DataScience\allDomainNames.txt");
+            
+            String[] domainNameAndWeights;
+            String line;
+            WeightedDomainResult tmpWeightedDomainResult;
+            while(true)
+            {
+                line = reader.ReadLine();
+                if(line == null){
+                    break;
+                }
+                domainNameAndWeights = line.Split('|');
+
+               
+                tmpWeightedDomainResult = new WeightedDomainResult()
+                {
+                    Domain = domainNameAndWeights[0],
+                    Score = new CatogoriesScoreSet(Double.Parse(domainNameAndWeights[1]), 
+                                                    Double.Parse(domainNameAndWeights[2]), 
+                                                    Double.Parse(domainNameAndWeights[3]), 
+                                                    Double.Parse(domainNameAndWeights[4]), 
+                                                    Double.Parse(domainNameAndWeights[5]))
+                };
+                allDomains.Add(tmpWeightedDomainResult);
+            }
+
+            // find teh searched domain name in the List
+            bool searchedDomainFound = allDomains.Any(e=>e.Domain == searchedDomain);
+
+            if(!searchedDomainFound) // if it WAS NOT found
+            {
+                DidYouMeanCandidate tmp = null;
+                foreach(WeightedDomainResult weightedDomain in allDomains)
+                {
+                    tmp = new DidYouMeanCandidate()
+                    { 
+                        Score = LevenshteinDistance.Compute(searchedDomain, weightedDomain.Domain), 
+                        Value = weightedDomain.Domain 
+                    };
+                    didYouMeanCollection.Add(tmp);
+                }
+
+                while(didYouMeanCollection.Count > 5)
+                {
+                    didYouMeanCollection.Remove(didYouMeanCollection.Last());
+                }
+            }
+            else // if it WAS found
+            {
+                WeightedDomainResult found = allDomains.First(e => e.Domain == searchedDomain);
+
+                percentageValues.Add(found.Score.Score[Category.Sports]);
+                percentageValues.Add(found.Score.Score[Category.Entertainment]);
+                percentageValues.Add(found.Score.Score[Category.News]);
+                percentageValues.Add(found.Score.Score[Category.Politics]);
+                percentageValues.Add(found.Score.Score[Category.School]);
+
+                categories.Add(Category.Sports.ToString());
+                categories.Add(Category.Entertainment.ToString());
+                categories.Add(Category.News.ToString());
+                categories.Add(Category.Politics.ToString());
+                categories.Add(Category.School.ToString());
+            }
+        }
+    }
+
+    int width = 0;
+    double percentageValue = 0;
+    String didYouMeanPrefix = "Did you mean... ";
+}
+
+
+<body>
+    <form method="post">
+        <p><input type="text" value="@Request.Form["domain"]" name="domain" style="width: 300px; height: 20px; vertical-align: middle" /></p>
+        <p><input type="button" name="buttonSubmit" value="Search"  /> </p>
+    </form>
+        
+    @{
+          
+        if(@categories.Count != 0) {
+            <table border="0">
+                @{
+                    if(didYouMeanCollection.Count != 0)
+                    {
+                        StringBuilder didyouMean = new StringBuilder();
+                        didyouMean.Append(didYouMeanPrefix);
+                        for(int i= 0; i<didYouMeanCollection.Count; i++)
+                        {
+                            if(i > 0 )
+                            {
+                                didyouMean.Append(", ");
+                            }
+
+                            didyouMean.Append(didYouMeanCollection.ElementAt(i));
+                        
+                            if(i  == didYouMeanCollection.Count -1)
+                            {
+                                didyouMean.Append("?");
+                            }
+                        }
+
+                        <tr>
+                            <td>
+                                <label> @didyouMean.ToString() </label>
+                            </td>
+                        </tr>
+                    }
+                }
+
+                @{  int  counter = 0;   }
+                @{
+                    int cx = 0;
+                    String percentageRepresentation = null, label = null;
+                    foreach(String category in categories)
+                    {
+                        percentageValue = @percentageValues.ElementAt(counter);
+                        width = (int)(percentageValue * 100);
+                            
+                        percentageRepresentation = percentageValue + "%";
+                        label = category + " - " + percentageRepresentation;
+                            
+                        cx = (counter * 100) + 150;
+                        <tr>
+                            <td>
+                                <svg width="150" height="150"   >
+                                    <circle cx="50" cy="cx" r="@width" stroke="green" stroke-width="4" fill="blue" />
+                                    Sorry, your browser does not support inline SVG.
+                                </svg>
+                            </td>
+                            <td>
+                                <label> @label  </label>
+                            </td>
+                        </tr>   
+                        counter++;
+                    }
+                }
+            </table>
+            }
+    }
+</body>
+

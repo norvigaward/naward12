@@ -1,0 +1,254 @@
+﻿@using System.Collections.Generic
+@using System.Text
+@using System.Linq
+@using System.Web
+@{
+    Layout = "~/_Layout.cshtml";  
+}
+@{
+    
+    StringBuilder exceptionMessage = new StringBuilder(String.Empty);
+    List<String> categories = new List<String>();
+    List<String> relativeDomainNames = new List<String>();
+    List<Double> percentageValues = new List<Double>();
+    SortedSet<DidYouMeanCandidate> didYouMeanCollection =  new SortedSet<DidYouMeanCandidate>();
+
+    String searchedDomain = searchedDomain = Request.Form["domain"];
+    String searchedDomainLink = Request.QueryString["domain"];
+
+    String searchMsg = "";
+
+    if(IsPost)
+    {
+        searchedDomain = Request.Form["domain"];
+    }
+
+    if(searchedDomain == null && searchedDomainLink != null)
+    {
+        searchedDomainLink = Request.QueryString["domain"];
+        if (searchedDomainLink !=null && searchedDomainLink.Length > 0)
+        {
+            searchedDomain = searchedDomainLink;
+            searchMsg = String.Format("<i>Search was performed for term: \"{0}\"</i>", searchedDomainLink);
+        }
+    }
+
+    bool searchedDomainFound = false;
+    if(searchedDomain != null )
+    {
+        if( !searchedDomain.IsEmpty() )
+        {
+            // read all domain names to a List<String>
+            List<WeightedDomainResult> allDomains = new List<WeightedDomainResult>();
+            StreamReader reader = reader = new StreamReader(HttpRuntime.AppDomainAppPath + "/DataScience/DataFiles/"+ searchedDomain.Substring(0,2));
+            String[] domainNameAndWeights;
+            String line;
+            WeightedDomainResult tmpWeightedDomainResult;
+            while(true)
+            {
+                line = reader.ReadLine();
+                if(line == null){
+                    break;
+                }
+
+                domainNameAndWeights = line.Split('\t');
+
+                String domainName = domainNameAndWeights[0];
+                String websiteAddress = domainNameAndWeights[1];
+
+                List<String> categoriesAndScores = new List<String>();
+                for(int d=2; d<domainNameAndWeights.Length; d++)
+                {
+                    categoriesAndScores.Add(domainNameAndWeights[d]);
+                }
+
+                tmpWeightedDomainResult = new WeightedDomainResult()
+                {
+                    Website = websiteAddress,
+                    Domain = Helper.NormalizeDomainName(domainName),
+                    Score = new CatogoriesScoreSet(categoriesAndScores)
+                };
+                allDomains.Add(tmpWeightedDomainResult);
+            }
+
+            // find the searched domain name in the List
+            searchedDomainFound = allDomains.Any(e => e.Domain == searchedDomain);
+//            if(!searchedDomainFound)
+//            {
+//                searchedDomainFound = allDomains.Any(e => e.Domain.Contains(searchedDomain));
+//                searchMsg = String.Format("<i>Search was performed for term: \"{0}\"</i>", allDomains.FirstOrDefault(e => e.Domain.Contains(searchedDomain)).Domain);
+//            }
+
+            if(!searchedDomainFound) // if it WAS NOT found
+            {
+
+                DidYouMeanCandidate tmp = null;
+                String normalizedDomainName = null;
+                foreach(WeightedDomainResult weightedDomain in allDomains)
+                {
+                    normalizedDomainName = Helper.NormalizeDomainName(weightedDomain.Domain);
+                    tmp = new DidYouMeanCandidate()
+                    { 
+                        Score = LevenshteinDistance.Compute(searchedDomain, normalizedDomainName), 
+                        Value = normalizedDomainName 
+                    };
+                    if(tmp.Score <= Helper.MAXIMUM_DOMAIN_NAME_DISTANCE )
+                    {
+                        didYouMeanCollection.Add(tmp);
+                    }
+                }
+
+                while(didYouMeanCollection.Count > 5)
+                {
+                    didYouMeanCollection.Remove(didYouMeanCollection.Last());
+                }
+
+                
+            }
+            else // if it WAS found
+            {
+                WeightedDomainResult found = null;
+                List<WeightedDomainResult> results = allDomains.Where(e => e.Domain == searchedDomain).ToList();
+                found = results.FirstOrDefault();
+//                if(results.Count > 1)
+//                {
+//                    relativeDomainNames.AddRange(results.Select(e => e.Website));
+//                }
+//                if (found == null)
+//                {
+//                    found = allDomains.FirstOrDefault(e => e.Domain.Contains(searchedDomain));
+//                    relativeDomainNames.AddRange(allDomains.Where(e => e.Domain.Contains(searchedDomain)).Select(e => e.Domain));
+//                }
+
+                foreach(String category in found.Score.Score.Keys)
+                {
+                    categories.Add(category);
+                    percentageValues.Add(found.Score.Score[category]);
+                }
+            }
+        }
+        else
+        {
+        }
+    }
+    else
+    {
+    }
+
+    int width = 0;
+    double percentageValue = 0;
+    String didYouMeanPrefix = "Did you mean... ";
+    StringBuilder relevantDomainNames = new StringBuilder("You might also be interested in: ");
+
+
+}
+
+
+<body>
+    <h2>Search</h2>
+    <form method="post">
+        <p><input type="text" value="@Request.Form["domain"]" id="domain" name="domain" style="width: 300px; height: 20px; vertical-align: middle" /></p>
+        <p><input type="submit" name="buttonSubmit" value="Search"/> </p>
+    </form>
+    @{
+        if(@searchMsg.Length != 0)
+        {
+            <label>@Html.Raw(searchMsg.ToString()) </label>
+            <hr>
+        }
+    }
+        
+    @{
+          
+        
+    <table border="0">
+    @{
+        if(!searchedDomainFound){
+            if(didYouMeanCollection.Count != 0)
+            {
+                StringBuilder didyouMean = new StringBuilder();
+                didyouMean.Append(didYouMeanPrefix);
+                for(int i= 0; i<didYouMeanCollection.Count; i++)
+                {
+                    if(i > 0 )
+                    {
+                        didyouMean.Append(", ");
+                    }
+
+                    didyouMean.Append(String.Format("<a href=\"Search.cshtml?domain={0}\">{0}</a>", didYouMeanCollection.ElementAt(i).Value));
+                        
+                    if(i  == didYouMeanCollection.Count -1)
+                    {
+                        didyouMean.Append("?");
+                    }
+                }
+
+                <tr>
+                    <td>
+                        <label>@Html.Raw(didyouMean.ToString()) </label>
+                    </td>
+                </tr>
+            }
+            else if (IsPost)
+            {
+               <tr>
+                    <td>
+                        <label>The domain name searched does not corresponds nor resembles to any known one. Please select another domain name or check your spelling. </label>
+                    </td>
+                </tr> 
+            }
+        }
+        
+    }
+
+    @{
+        if(@categories.Count != 0)   {
+
+            int  counter = 0;   
+                   
+            String scoreRepresentation = null, label = null;
+            foreach(String category in categories)
+            {
+                percentageValue = @percentageValues.ElementAt(counter);
+                width = (int)(percentageValue * 10);
+                            
+                scoreRepresentation = percentageValue + " points";
+                label = category + " - " + scoreRepresentation;
+                            
+                <tr>
+                    <td>
+                            <canvas id="myCanvas" 
+                                    width ="@width" 
+                                    height="20" 
+                                    style="background: -webkit-linear-gradient(#0000CC, #0066CC , #00CCFF); box-shadow: 2,2,2,inset;">
+                                Your browser does not support the HTML5 canvas tag.
+                            </canvas>
+    
+                    </td>
+                    <td>
+                        <label> @label  </label>
+                    </td>
+
+                               
+                </tr>   
+                counter++;
+            }
+            
+    
+        }
+    }
+    </table>
+
+        if(relativeDomainNames.Count!=0)
+        {
+            foreach(String relevantDomainName in relativeDomainNames)
+            {
+                relevantDomainNames.Append(String.Format("<a href=\"Search.cshtml?domain={1}\">{0}</a>, ", relevantDomainName, relevantDomainName.Replace("www.", "").Split('.')[0]));
+            }
+            relevantDomainNames.Remove(relevantDomainNames.Length -1, 1);
+            <label> @Html.Raw(relevantDomainNames.ToString())  </label>
+
+        }  
+    }
+</body>
+
