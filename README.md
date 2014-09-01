@@ -126,7 +126,7 @@ The source code for the Java applcation performing the data transformation tasks
 The classified domains and their corresponding categories are counted for each unique category. This count is then employed in a d3js script to visualize in the form of a simple donut chart which displays the number of domains found in common crawl that correspond to each category. By moving the slider, you may view the different distribution of domains in a number of sub-categories (see Fihure 4).
 
 ![alt tag](/pictures/report/overview.JPG)
-<b>Figure 4. Case of wrong entrance of domainname, user selects one of teh recomendations
+<b>Figure 4. Visualization
 
 ## 5. Further Improvements
 - The training data can be increased further so as to accomodate all of ODP (4,182,639) at the time of writing. 
