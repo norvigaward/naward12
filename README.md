@@ -66,6 +66,8 @@ In order to train our classifier to categorize a web page, we must first collect
 - We then utilize a custom <a href="http://doc.scrapy.org/en/latest/index.html">Scrapy</a> module that can be found in our <a href="https://github.com/norvigaward/naward12/tree/master/scraper">repository</a> to crawl the content of the URLs listed on the second level of ODP. Only this time, we ignore all script, style and most common english words to attain only the most informative words for each web page. 
 - The most informative words stored in a large TSV file found that can be found <a href="https://copy.com/L10OrSzm6DjH">here</a>. The TSV file is then parsed into a hadoop sequence file using a script found <a href="https://github.com/norvigaward/naward12/tree/master/mahout">here</a>.
 
+There are in total 599,981 pages that were crawled for the purpose of training.
+
 ###2.2 Training
 Once we attain the training data, a naive bayes classifier is trained through the use of <a href="https://mahout.apache.org/">Apache Mahout</a>. First, the new sequence file must be uploaded and the following commands must be executed in sequence:
 
@@ -84,7 +86,7 @@ yarn jar odp-1.0-fatjar.jar odp model odp-vectors/dictionary.file-0 odp-vectors/
 </pre>
 where $VARIABLE is substituted with the required values.
 
-Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data. The results of the classification can be found <a href="https://copy.com/BUacI4uhhmVm">here</a>. Since the results are in the form of log probability, the values would be negative.
+Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data. The results of the classification can be found <a href="https://copy.com/BUacI4uhhmVm">here</a>. Since the results are in the form of log probability, the values would be negative. There are in total 15,278,873 pages that have been classified.
 
 ## 3. Search Engine
 A search engine is implemented in an attempt to materialize the idea of the domain name categorization mentioned earlier. The main functionality provided is the ability to query on a domain name and receive a set of categories that the domains content is relevant to, along with a score to indicate teh degree of relevancy.
@@ -126,8 +128,20 @@ The classified domains and their corresponding categories are counted for each u
 ![alt tag](/pictures/report/overview.JPG)
 <b>Figure 4. Case of wrong entrance of domainname, user selects one of teh recomendations
 
-## 5. References
+## 5. Further Improvements
+- The training data can be increased further so as to accomodate all of ODP (4,182,639) at the time of writing. 
+- A more accurate classifier such as support vector can be implemented rather than the simple naive bayes classifier.
+- Improvements to the search engine by accomodating more verbose results and a general improvement of the UI through CSS and jquery to accomodate nicer animation.
+
+## 6. References
 [1] Black, Paul E., ed. (14 August 2008), "Levenshtein distance", Dictionary of Algorithms and Data Structures [online], U.S. National Institute of Standards and Technology, retrieved 3 April 2013
+
+## 7. Gist
+- 517 <a href="https://github.com/norvigaward/naward12/blob/master/stats/labels.txt">Categories</a>
+- 599,981 categorized <a href="https://copy.com/L10OrSzm6DjH">URls</a> from <a href="http://www.dmoz.org/">ODP</a>
+- Use of <a href="https://mahout.apache.org/">Mahout</a> naive bayes classifier for training.
+- 15,278,873 <a href="https://github.com/norvigaward/naward12/blob/master/stats/cc_stats.tsv>CC pages</a> categorized.
+- Categorized CC labels used to implement a <a href="http://naward12.com/">search engine</a>.
 
 
 # <a href=http://www.naward12.com> Visit the website yourself </a>
