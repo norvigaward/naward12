@@ -110,15 +110,14 @@ An innacuratelly typed domain name provokes a relative message to the user (see 
 ![alt tag](/pictures/report/didyoumeannew2.JPG)
 <b>Figure 3. Case of wrong entrance of domainname, user selects one of teh recomendations
 
-
-The source files that regard the web application can be found here.
+The source files that regard the web application can be found <a href="https://github.com/norvigaward/naward12/tree/master/src/web%20application%20-%20search%20engine">here</a>.
 
 ### 3.3. Data Layer
 The data layer consists of the files that contain the information returned by the search engine's responses. All crawled data was initially stored in files and indexed by URL so as to contain the top three categories closer in terms of content relevancy, along with the score each URL exhibited to each category. These files were transformed, so as to group the URLs deriving from the same source website and assign the average of the score per category to the root website for this specific category. Subsequenty, the websites were indexed on their domain names and their information were stored in files named after the first two letters of their domain names, so as to increase efficiency and decrease response time. Java was used for transforming files and providing the final data and file structure, so as to be used by the business layer.
 
 The described process was completed in two steps: (1) extracting the domain names, re-grouping the URLs into alphabetical order and spreading them each to the appropriate file and (2) grouping the URLs to their corresponding source website and merging the categories and their scores to point to the webstes as well.
 
-The source code for the Java applcation performing the data transformation tasks can be found here.
+The source code for the Java applcation performing the data transformation tasks can be found <a href="https://github.com/norvigaward/naward12/tree/master/src/data%20transformation%20app/src">here</a>.
 
 <br>
 ## 4. Visualization
