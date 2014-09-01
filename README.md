@@ -87,7 +87,9 @@ where $VARIABLE is substituted with the required values.
 Each classification takes around 2hrs to complete. Due to time constraints, we were only able to classify 60 sequence files present in the main common crawl data. The results of the classification can be found <a href="https://copy.com/BUacI4uhhmVm">here</a>. Since the results are in the form of log probability, the values would be negative.
 
 ## 3. Search Engine
+A search engine is implemented in an attempt to materialize the idea of the domain name categorization mentioned earlier. The main functionality provided is the ability to query on a domain name and receive a set of categories that the domains content is relevant to, along with a score to indicate teh degree of relevancy.
 
+As of a technical perspective, the search engine was implemented by a web application ruled by the architecture presented below.
 
 ### 3.1. User Interface - Presentation Layer
 The implementation of the user interface is relied on Microsoft Technologies; Microsoft Web Matrix was used as the IDE for designing and structuring teh web applicationa and Microsoft .NET Framework 4 was used so as to include ASP.NET 4.0 and the RAZOR syntax.
@@ -126,7 +128,7 @@ The classified domains and their corresponding categories are counted for each u
 <b>Figure 4. Case of wrong entrance of domainname, user selects one of teh recomendations
 
 ## 5. References
-* [1] Black, Paul E., ed. (14 August 2008), "Levenshtein distance", Dictionary of Algorithms and Data Structures [online], U.S. National Institute of Standards and Technology, retrieved 3 April 2013
+[1] Black, Paul E., ed. (14 August 2008), "Levenshtein distance", Dictionary of Algorithms and Data Structures [online], U.S. National Institute of Standards and Technology, retrieved 3 April 2013
 
 
 # <a href=http://www.naward12.com> Visit the website yourself </a>
